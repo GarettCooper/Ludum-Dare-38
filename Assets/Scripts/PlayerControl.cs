@@ -11,18 +11,11 @@ public class PlayerControl : MonoBehaviour {
 	private Vector2 direction;
 
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		direction = new Vector3();
 	}
 
 	void FixedUpdate() {
-		
-		
-	}
-
-	// Odd unresponsiveness to key release, look for source
-	void Update () {
-
 		verticalInput = Input.GetAxis("Vertical");
 		horizontalInput = Input.GetAxis("Horizontal");
 
@@ -35,5 +28,10 @@ public class PlayerControl : MonoBehaviour {
 		direction *= (speed / 100);
 
 		transform.Translate(direction);
+	}
+
+	// Odd unresponsiveness to key release, look for source
+	void Update() {
+
 	}
 }

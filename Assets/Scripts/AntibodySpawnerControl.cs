@@ -29,7 +29,7 @@ public class AntibodySpawnerControl : MonoBehaviour {
 		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, angle);
 
 		//Debug.Log("Angle: " + angle + "   " + Mathf.Cos(angle) * radius);
-		Vector2 position = new Vector2(Mathf.Cos((angle+90) * Mathf.Deg2Rad) * radius, Mathf.Sin((angle+90) * Mathf.Deg2Rad) * radius);
+		Vector2 position = new Vector2(Mathf.Cos((angle + 90) * Mathf.Deg2Rad) * radius, Mathf.Sin((angle + 90) * Mathf.Deg2Rad) * radius);
 		transform.localPosition = position;
 		//Debug.Log(position);
 		//if (Input.GetKeyDown(KeyCode.Mouse0)) Debug.Log(position);
@@ -41,7 +41,6 @@ public class AntibodySpawnerControl : MonoBehaviour {
 			cooldown = cooldownTime;
 			antibody.transform.eulerAngles = transform.eulerAngles;
 			antibody.transform.position = transform.position;
-			Debug.Log(transform.localPosition.normalized);
 			Instantiate(antibody);
 		}
 	}
