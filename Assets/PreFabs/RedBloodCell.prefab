@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212845413553283128}
   - component: {fileID: 58833606040900136}
   - component: {fileID: 50696356034260340}
+  - component: {fileID: 114008919055830786}
   m_Layer: 0
   m_Name: RedBloodCell
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,8 +36,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1363320997371814}
-  m_LocalRotation: {x: 0, y: 0, z: 0.000000058970066, w: 1}
-  m_LocalPosition: {x: -0.12902026, y: 1.5086129, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.554681, y: 1.54436, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -77,6 +78,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &114008919055830786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1363320997371814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d94bb95998ceab4b811ef9a322e50c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  driftSpeed: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &212845413553283128
 SpriteRenderer:
   m_ObjectHideFlags: 1

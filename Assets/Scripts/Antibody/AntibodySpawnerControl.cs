@@ -40,8 +40,9 @@ public class AntibodySpawnerControl : MonoBehaviour {
 			Debug.Log("Fire Antibody");
 			cooldown = cooldownTime;
 			antibody.transform.eulerAngles = transform.eulerAngles;
-			antibody.transform.position = transform.position;
+			antibody.transform.position = transform.position;		
 			Instantiate(antibody);
+			//antibody.transform.SetParent(GameObject.Find("Antibodies").transform);
 		}
 	}
 }

@@ -21,8 +21,8 @@ public class RhinoTargetingBehaviour : DT.LogicalStateMachineBehaviour {
 		Animator.transform.localEulerAngles = new Vector3(Animator.transform.localEulerAngles.x, Animator.transform.localEulerAngles.y, angle);
 
 		RaycastHit2D rch = Physics2D.Raycast(Animator.transform.FindChild("Horn").position,Animator.transform.eulerAngles,100000);
-		Debug.Log(rch.distance);
-		Debug.Log(rch.point);
+		//Debug.Log(rch.distance);
+		//Debug.Log(rch.point);
 		if (rch && rch.transform.tag == "Player") {
 			Debug.Log("Charge");
 			Animator.SetTrigger("Charge");

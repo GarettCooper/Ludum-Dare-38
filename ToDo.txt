@@ -1,10 +1,13 @@
 Fix unresponsive key release on B-Cell translation.
 Fix mouse in centre of B-Cell
 Fix broken raycasting
-
+Find better solution for static walls that antibodies stick to than infinite mass
+Add variability to pneumonia replication cooldown
+implement pneumonia rotation speed
 
 
 
 !!! Maybe:
 
 Test asteroid-like movement system.
+Wave mode (easiest) and other modes (with upgrades and such)

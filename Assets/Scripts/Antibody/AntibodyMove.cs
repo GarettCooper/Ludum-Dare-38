@@ -27,6 +27,7 @@ public class AntibodyMove : MonoBehaviour {
 	public void Freeze(Transform t) {
 		canMove = false;
 		transform.SetParent(t);
-		GetComponent<Collider2D>().isTrigger = false;
+		//GetComponent<Collider2D>().isTrigger = false;
+		Destroy(GetComponent<Collider2D>());
 	}
 }
