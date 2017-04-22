@@ -1,0 +1,55 @@
+DARK/LIGHT:
+  Players hide in dark area, stealth game
+  Turning lights on and off
+  Puzzle game?
+
+YOU CONTROL THE GAME, NOT THE PLAYER:
+  Game freezes, but not the player?
+
+PARALLEL DIMENSIONS:
+  Platformer switching between to levels? (Literal parallel lines)
+
+PAUSING HAS CONSEQUENCES:
+  Simplest implementation is adding cost (health/pause currency)
+
+KEEP IT ALIVE:
+  Almost certainly not going to be picked, no one likes escort quests
+
+TWO COLOURS:
+  Similar mechanic to Dark/Light
+
+ISLAND:
+  Working with limited space
+
+A WORLD IN THE SKIES:
+  Boring theme, just hoping it doesn't get picked
+
+YOU ARE ALONE:
+  Game based on avoiding interaction with people
+
+INCONVENIENT SUPERPOWERS:
+  Spending currency to attack things?
+
+ON/OFF:
+  Player can turn self on/off?
+
+DEATH IS ONLY THE BEGINNING:
+  Past lives play out concurrently (Not exactly original)
+
+START WITH NOTHING:
+  Begin the game without the ability to move
+  Can move, but only in one direction.
+  Continue to add new movement options
+  puzzling potential
+
+ONE TOOL, MANY USES:
+  Continue to get upgrades for a central tool
+  Metroidvania
+
+EVERYTHING HAS A COST:
+  Something similar to DLC quest?
+  Metroidvania where new mechanics are not introduced sequentially, but can be bought in any order
+
+A SMALL WORLD:
+  Like island, working with limited space.
+  Literal small planet?
