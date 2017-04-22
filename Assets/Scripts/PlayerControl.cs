@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementScript : MonoBehaviour {
+public class PlayerControl : MonoBehaviour {
 
 	public float speed;
 
@@ -27,8 +27,12 @@ public class PlayerMovementScript : MonoBehaviour {
 		horizontalInput = Input.GetAxis("Horizontal");
 
 		direction.Set(horizontalInput * Time.deltaTime, verticalInput * Time.deltaTime);
+
+		//Ensure Maximum Speed is maintained
 		direction.Normalize();
-		direction *= speed;
+
+		//Divide by 100 for consistency, but use more intuitive values in editor.
+		direction *= (speed / 100);
 
 		transform.Translate(direction);
 	}
