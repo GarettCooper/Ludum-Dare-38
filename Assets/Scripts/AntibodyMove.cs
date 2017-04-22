@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class AntibodyMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start() {
-
+		Destroy(gameObject, 50);
 	}
 
 	// Update is called once per frame
@@ -18,10 +19,14 @@ public class AntibodyMove : MonoBehaviour {
 		if(canMove) transform.Translate(new Vector2(0, 1) * (speed / 100) * Time.deltaTime);
 	}
 
+	public void Freeze(Transform t, float v) {
+		Freeze(t);
+		Destroy(gameObject, v);
+	}
+
 	public void Freeze(Transform t) {
 		canMove = false;
 		transform.SetParent(t);
 		GetComponent<Collider2D>().isTrigger = false;
-		Destroy(gameObject, 10);
 	}
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTestScript : MonoBehaviour {
+public class EnemyBehaviour : MonoBehaviour {
 
 	public Sprite aliveSprite;
 	public Sprite deadSprite;
@@ -11,16 +11,16 @@ public class EnemyTestScript : MonoBehaviour {
 	bool alive = true;
 
 	// Use this for initialization
-	void Start() {
-		this.GetComponent<SpriteRenderer>().sprite = aliveSprite;
+	protected void Start() {
+		this.GetComponentInChildren<SpriteRenderer>().sprite = aliveSprite;
 	}
 
-	private void FixedUpdate() {
+	protected void FixedUpdate() {
 
 	}
 
 	// Update is called once per frame
-	void Update() {
+	protected void Update() {
 
 	}
 
@@ -35,7 +35,7 @@ public class EnemyTestScript : MonoBehaviour {
 
 	void Kill() {
 		alive = false;
-		this.GetComponent<SpriteRenderer>().sprite = deadSprite;
+		this.GetComponentInChildren<SpriteRenderer>().sprite = deadSprite;
 		Destroy(gameObject, 10);
 	}
 }
