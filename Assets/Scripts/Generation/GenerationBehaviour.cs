@@ -8,14 +8,15 @@ public class GenerationBehaviour : MonoBehaviour {
 
 	public float density;
 
-	protected const int playAreaWidth = 60;   //Technically untrue, but simpler
-	protected const int playAreaHeight = 40;
+	protected const int playAreaWidth = 55;   //Technically untrue, but simpler
+	protected const int playAreaHeight = 35;
 	protected int count;
 
-	protected System.Random rand = new System.Random();
+	protected System.Random rand;
 
 	// Use this for initialization
 	void Start () {
+		rand = new System.Random();
 		count = (int)(2 * playAreaWidth * 2 * playAreaHeight * density);
 		GameObject temp; // For encapsulation
 		for (int i = 0; i < count; i++) {

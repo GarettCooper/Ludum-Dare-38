@@ -5,6 +5,7 @@ Find better solution for static walls that antibodies stick to than infinite mas
 Add variability to pneumonia replication cooldown
 implement pneumonia rotation speed
 Fix pneumonia jittery
+Prevent enemies spawning right next to plauer
 
 
 

@@ -6,6 +6,7 @@ public class AntibodySpawnerControl : MonoBehaviour {
 
 	public float cooldownTime;
 	public GameObject antibody;
+	public AudioClip shoot;
 
 	private float radius;
 	private float cooldown;
@@ -19,8 +20,6 @@ public class AntibodySpawnerControl : MonoBehaviour {
 	void Update() {
 		Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		mousePos -= transform.position;
-		//float mouseX = Input.GetAxis("Mouse X");
-		//float mouseY = Input.GetAxis("Mouse Y");
 
 		float angle = (Mathf.Atan2(mousePos.x, mousePos.y) * Mathf.Rad2Deg);
 		if (angle < 0) angle += 360;
@@ -35,9 +34,11 @@ public class AntibodySpawnerControl : MonoBehaviour {
 		cooldown -= Time.deltaTime;
 
 		// This should probably have it's own method for internal consistency, but I don't want to take the time.
+		//I'm beginning to sense a theme here
 		if (Input.GetButton("Fire1") && cooldown < 0) {
 			Debug.Log("Fire Antibody");
 			cooldown = cooldownTime;
+			AudioSource.PlayClipAtPoint(shoot,transform.position);
 			antibody.transform.eulerAngles = transform.eulerAngles;
 			antibody.transform.position = transform.position;		
 			GameObject temp = Instantiate(antibody);

@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerLogic : MonoBehaviour {
 
 	public int health;
+	public AudioClip hurt;
 
 	// Use this for initialization
 	void Start () {
@@ -24,13 +25,14 @@ public class PlayerLogic : MonoBehaviour {
 	}
 
 	private void Death() {
-		
+		Debug.Log("Dead");
 	}
 
 	private void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log("Player hit");
 		if(other.tag == "Enemy Projectile") {
 			other.GetComponent<ProjectileMove>().Freeze(transform);
+			AudioSource.PlayClipAtPoint(hurt, transform.position);
 			health--;
 		}
 	}
