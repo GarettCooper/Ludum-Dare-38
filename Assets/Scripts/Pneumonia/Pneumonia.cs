@@ -28,7 +28,7 @@ public class Pneumonia : EnemyBehaviour {
 	new void FixedUpdate() {
 		base.FixedUpdate();
 
-		FacePlayer();
+		if(alive) FacePlayer();
 	}
 
 	// Update is called once per frame
@@ -39,7 +39,7 @@ public class Pneumonia : EnemyBehaviour {
 
 	void FacePlayer() {
 
-		Debug.Log("Face Player");
+		//Debug.Log("Face Player");
 
 		Vector3 relativePos = transform.position - player.transform.position;
 

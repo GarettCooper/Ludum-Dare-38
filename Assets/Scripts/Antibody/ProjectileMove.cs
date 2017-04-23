@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AntibodyMove : MonoBehaviour {
+public class ProjectileMove : MonoBehaviour {
 
 	public float speed;
 	public bool canMove = true;
@@ -27,6 +27,7 @@ public class AntibodyMove : MonoBehaviour {
 	public void Freeze(Transform t) {
 		canMove = false;
 		transform.SetParent(t);
+		//transform.lossyScale = new Vector3(0.5, 0.5, 1);
 		//GetComponent<Collider2D>().isTrigger = false;
 		Destroy(GetComponent<Collider2D>());
 	}

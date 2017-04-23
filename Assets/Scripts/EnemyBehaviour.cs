@@ -8,7 +8,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	public Sprite deadSprite;
 	public int health;
 
-	bool alive = true;
+	protected bool alive = true;
 
 	protected Vector3 disToPlayer;
 
@@ -41,10 +41,11 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.tag == "Projectile") {
-			Debug.Log("Hit!");
-			collision.GetComponent<AntibodyMove>().Freeze(transform);
+			collision.GetComponent<ProjectileMove>().Freeze(transform);
 			health--;
-			if(health <= 0) Kill();
+			if (health <= 0) Kill();
+		} else if (collision.tag == "Enemy Projectile") {
+			collision.GetComponent<ProjectileMove>().Freeze(transform,5);
 		}
 	}
 

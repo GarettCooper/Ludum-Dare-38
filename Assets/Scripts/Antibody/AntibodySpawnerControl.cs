@@ -28,21 +28,20 @@ public class AntibodySpawnerControl : MonoBehaviour {
 		//Don't want to spend time determining why angle is inverted, negative is quickest fix
 		transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, angle);
 
-		//Debug.Log("Angle: " + angle + "   " + Mathf.Cos(angle) * radius);
+		//Adding 90 means this is probably reversed, but I don't want to spend time testing when this works fine.
 		Vector2 position = new Vector2(Mathf.Cos((angle + 90) * Mathf.Deg2Rad) * radius, Mathf.Sin((angle + 90) * Mathf.Deg2Rad) * radius);
 		transform.localPosition = position;
-		//Debug.Log(position);
-		//if (Input.GetKeyDown(KeyCode.Mouse0)) Debug.Log(position);
 
 		cooldown -= Time.deltaTime;
 
+		// This should probably have it's own method for internal consistency, but I don't want to take the time.
 		if (Input.GetButton("Fire1") && cooldown < 0) {
 			Debug.Log("Fire Antibody");
 			cooldown = cooldownTime;
 			antibody.transform.eulerAngles = transform.eulerAngles;
 			antibody.transform.position = transform.position;		
-			Instantiate(antibody);
-			//antibody.transform.SetParent(GameObject.Find("Antibodies").transform);
+			GameObject temp = Instantiate(antibody);
+			temp.transform.SetParent(GameObject.Find("Antibodies").transform);
 		}
 	}
 }

@@ -7,9 +7,10 @@ public class RNAFire : MonoBehaviour {
 	public GameObject projectile;
 
 	public void Fire() {
-		Debug.Log("Fire RNA");
+		//Debug.Log("Fire RNA");		
 		projectile.transform.eulerAngles = transform.eulerAngles;
 		projectile.transform.position = transform.position;
-		Instantiate(projectile);
+		GameObject temp = Instantiate(projectile);
+		temp.transform.SetParent(GameObject.Find("RNA").transform);
 	}
 }

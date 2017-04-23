@@ -25,9 +25,9 @@ public class RedBloodCell : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
-		if (collision.tag == "Projectile") {
+		if (collision.tag.Contains("Projectile")) {
 			Debug.Log("Hit!");
-			collision.GetComponent<AntibodyMove>().Freeze(transform, 10);
+			collision.GetComponent<ProjectileMove>().Freeze(transform, 10);
 		}
 	}
 
