@@ -26,7 +26,10 @@ public class PlayerLogic : MonoBehaviour {
 	// Update is called once per frame
 	void Update() {
 		if (!alive) {
-			if (Input.GetButton("Cancel")) SceneManager.LoadScene("Menu");
+			if (Input.GetButton("Cancel")) {
+				Time.timeScale = 1;
+				SceneManager.LoadScene("Menu");
+			} 
 			else if (Input.GetButton("Restart")){
 				Time.timeScale = 1;
 				SceneManager.LoadScene("MainScene");
