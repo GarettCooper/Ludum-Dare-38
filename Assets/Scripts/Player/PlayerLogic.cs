@@ -6,15 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLogic : MonoBehaviour {
 
+	public int maxHealth;
 	public int health;
 	public AudioClip hurt;
 
 	private StatTracker stats;
 	private PopupText popup;
 	private bool alive;
+	
 
 	// Use this for initialization
 	void Start() {
+		health = maxHealth;
 		stats = GameObject.Find("Stats").GetComponent<StatTracker>();
 		popup = GameObject.Find("PopupText").GetComponent<PopupText>();
 		alive = true;
@@ -24,7 +27,10 @@ public class PlayerLogic : MonoBehaviour {
 	void Update() {
 		if (!alive) {
 			if (Input.GetButton("Cancel")) SceneManager.LoadScene("Menu");
-			else if (Input.GetButton("Restart")) SceneManager.LoadScene("MainScene");
+			else if (Input.GetButton("Restart")){
+				Time.timeScale = 1;
+				SceneManager.LoadScene("MainScene");
+			}
 		} else if (Input.GetButton("Cancel"))
 			popup.PushToScreen("Are you sure you want to quit?\nPress Escape + Enter to confirm", 5);
 
