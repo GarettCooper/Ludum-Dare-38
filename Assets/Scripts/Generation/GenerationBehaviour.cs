@@ -12,11 +12,10 @@ public class GenerationBehaviour : MonoBehaviour {
 	protected const int playAreaHeight = 35;
 	protected int count;
 
-	protected System.Random rand;
+	protected System.Random rand = Randomizer.random;
 
 	// Use this for initialization
-	void Start () {
-		rand = new System.Random();
+	void Start() {
 		count = (int)(2 * playAreaWidth * 2 * playAreaHeight * density);
 		GameObject temp; // For encapsulation
 		for (int i = 0; i < count; i++) {
@@ -25,9 +24,9 @@ public class GenerationBehaviour : MonoBehaviour {
 			temp.transform.SetParent(transform);
 		}
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-		
+	void Update() {
+		//Debug.Log("Generating Red Blood Cells");
 	}
 }

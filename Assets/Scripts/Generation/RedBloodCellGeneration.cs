@@ -6,7 +6,7 @@ public class RedBloodCellGeneration : GenerationBehaviour {
 
 	// Use this for initialization
 	void Start() {
-		rand = new System.Random();
+		Debug.Log("Generating Red Blood Cells");
 		GameObject temp; // For encapsulation
 		for (int i = 0; i < count; i++) {
 			obj.transform.position = new Vector2(rand.Next(-playAreaWidth, playAreaWidth), rand.Next(-playAreaHeight, playAreaHeight));

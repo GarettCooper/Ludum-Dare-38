@@ -10,23 +10,23 @@ public class RedBloodCell : MonoBehaviour {
 	private Vector2 direction;
 
 	// Use this for initialization
-	void Start () {
+	void Start() {
 		direction = Random.insideUnitCircle;
 	}
 
 	private void FixedUpdate() {
-		transform.Translate(direction * (driftSpeed/100));
-		if(GetComponent<Collider2D>().IsTouchingLayers(layerMask)) direction = Random.insideUnitCircle;
+		transform.Translate(direction * (driftSpeed / 10) * Time.deltaTime);
+		if (GetComponent<Collider2D>().IsTouchingLayers(layerMask)) direction = Random.insideUnitCircle;
 	}
 
 	// Update is called once per frame
-	void Update () {
-		
+	void Update() {
+
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision) {
 		if (collision.tag.Contains("Projectile")) {
-			Debug.Log("Hit!");
+			//Debug.Log("Hit!");
 			collision.GetComponent<ProjectileMove>().Freeze(transform, 10);
 		}
 	}

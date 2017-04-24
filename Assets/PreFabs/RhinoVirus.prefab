@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 95095303918866414}
   - component: {fileID: 114985259659468476}
   m_Layer: 0
-  m_Name: RhinoVirus
+  m_Name: Rhinovirus
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,8 +68,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1187934369730026}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.236, y: -2.82, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.23147202, w: -0.97284156}
+  m_LocalPosition: {x: 7.2390785, y: -30.430101, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4682089531693052}
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aliveSprite: {fileID: 21300000, guid: c0db86cbd59c30843a1a92306f09b339, type: 3}
-  deadSprite: {fileID: 21300000, guid: c0db86cbd59c30843a1a92306f09b339, type: 3}
+  deadSprite: {fileID: 21300000, guid: 89f4a3af793e98849a514332aac68bf2, type: 3}
   health: 4
   rotationSpeed: 60
 --- !u!212 &212248172511989872

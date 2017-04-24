@@ -18,6 +18,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	protected int healthHash;
 	protected int pdHash;
 
+	private StatTracker stats;
 
 	// Use this for initialization
 	protected void Start() {
@@ -26,6 +27,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		healthHash = Animator.StringToHash("Health");
 		pdHash = Animator.StringToHash("PlayerDist");
 		player = GameObject.FindGameObjectWithTag("Player");
+		stats = GameObject.Find("Stats").GetComponent<StatTracker>();
 	}
 
 	protected void FixedUpdate() {
@@ -43,7 +45,7 @@ public class EnemyBehaviour : MonoBehaviour {
 		if (collision.tag == "Projectile") {
 			collision.GetComponent<ProjectileMove>().Freeze(transform);
 			health--;
-			if (health <= 0) Kill();
+			if (health <= 0 && alive) Kill();
 		} else if (collision.tag == "Enemy Projectile") {
 			collision.GetComponent<ProjectileMove>().Freeze(transform,5);
 		}
@@ -68,6 +70,7 @@ public class EnemyBehaviour : MonoBehaviour {
 
 	void Kill() {
 		alive = false;
+		stats.enemiesKilled++;
 		this.GetComponentInChildren<SpriteRenderer>().sprite = deadSprite;
 		Destroy(gameObject, 10);
 	}

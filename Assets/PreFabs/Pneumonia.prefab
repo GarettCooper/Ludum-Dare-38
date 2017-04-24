@@ -53,8 +53,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584890917484184}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.598476, y: 12.161292, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.94356924, w: 0.33117533}
+  m_LocalPosition: {x: 33.648174, y: -29.740755, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4955926453718712}
@@ -138,10 +138,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aliveSprite: {fileID: 21300000, guid: dea84666e83050040ba185697280faa4, type: 3}
-  deadSprite: {fileID: 21300000, guid: dea84666e83050040ba185697280faa4, type: 3}
+  deadSprite: {fileID: 21300000, guid: 84d453cc5f571da40845ba6a5fb8bd21, type: 3}
   health: 6
   replicationTime: 40
-  moveSpeed: 4
+  moveSpeed: 8
   rotationSpeed: 60
   fireCooldownTime: 0.75
 --- !u!114 &114634265466150542

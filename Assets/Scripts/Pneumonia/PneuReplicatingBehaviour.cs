@@ -26,7 +26,7 @@ public class PneuReplicatingBehaviour : DT.LogicalStateMachineBehaviour {
 	override protected void OnStateUpdated() {
 
 		//Wander, from red blood cell code
-		Animator.transform.Translate(direction * 0.002f);
+		Animator.transform.Translate(direction * 0.1f * Time.deltaTime);
 		if (Animator.GetComponent<Collider2D>().IsTouchingLayers(layerMask)) direction = Random.insideUnitCircle.normalized;
 
 		elapsedTime += Time.deltaTime;
